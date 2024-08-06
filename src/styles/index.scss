@@ -1,0 +1,241 @@
+// Remember to add color theme classes
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+line-height: calc(1em + 0.5rem);
+-webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+display: block;
+max-width: 100%;
+}
+
+input, button, textarea, select {
+font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+overflow-wrap: break-word;
+}
+
+@font-face {
+    font-family: inconsolata;
+    src: url(../src/assets/fonts/inconsolata/Inconsolata-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: inter;
+    src: url(../src/assets/fonts/inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: lora;
+    src: url(../src/assets/fonts/lora/Lora-VariableFont_wght.ttf);
+}
+
+.body-inconsolata {
+    font-family: inconsolata;
+}
+
+.body-inter {
+    font-family: inter;
+}
+
+.body-lora {
+    font-family: lora;
+}
+  
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    // Change this
+    padding: 50px 300px
+}
+
+main {
+    width: 100%;
+}
+
+header {
+    display: grid;
+    gap: 50px;
+}
+
+.header__top  {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__buttons {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+
+.font__control {
+    position: relative;
+}
+
+.font {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.option__dropdown {
+    position: absolute;
+    display: grid;
+    gap: 16px;
+    padding: 24px;
+    border-radius: 16px;
+    z-index: 2;
+    width: 183px;
+    height: 152px;
+    top: 35px;
+    right: 0;
+
+    button {
+        background: none;
+        border: none;
+        text-align: start;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    button:hover {
+        color: #a445ed;
+    }
+
+    .font__name--inconsolata{
+        font: bold 18px inconsolata;
+    }
+
+    .font__name--inter {
+        font: bold 18px  inter;
+    }
+    .font__name--lora {
+        font: bold 18px lora;
+    }
+
+}
+
+.option__dropdown--status {
+    display: none;
+}
+
+.header__line {
+    width: 1px;
+    height: 32px;
+    background-color: #e9e9e9;
+}
+
+.theme__controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.toggle {
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    display: block;
+}
+
+.toggle__slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block;
+    border-radius: inherit;
+    background-color: #757575;
+}
+
+.toggle__slider::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    background-color: white;
+    transition: .3s;
+}
+
+#check:focus + .toggle__slider {
+    outline: 1px solid blue;
+}
+
+#check:checked + .toggle__slider {
+    background-color: #a445ed;
+}
+ 
+#check:checked + .toggle__slider::before {
+    transform: translateX(20px);
+}
+
+#check {
+    position: absolute;
+    z-index: -2;
+    top: 3px;
+    left: 50%;
+}
+
+form {
+    width: 100%;
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+
+    label {
+        flex-grow: 1;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        cursor: text;
+    }
+
+    input {
+        background: none;
+        border: none;
+        outline: none;
+        width: 100%;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    input & {
+        background-color: red;
+    }
+
+    button {
+        background: none;
+        border: none;
+    }
+}
+ 
+.form--focus {
+    border: 1px solid #a445ed;
+}

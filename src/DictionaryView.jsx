@@ -3,7 +3,7 @@
 function DictionaryView() {
 
     return(<>
-        Hello
+        <p className="hello">Hello World</p>
     </>)
 }
 

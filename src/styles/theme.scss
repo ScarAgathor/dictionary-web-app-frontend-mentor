@@ -1,0 +1,50 @@
+.body--light {
+    background-color: #ffffff;
+}
+
+.body--dark {
+    background-color: #050505;
+}
+
+.current__font--light {
+    color: #2d2d2d;
+}
+
+.current__font--dark {
+    color: #ffffff;
+}
+
+.option__dropdown--light {
+    background-color: white;
+    box-shadow: 0 5px 30px hsla(0, 0%, 0%, .1);
+}
+
+.option__dropdown--dark {
+    background-color: #1f1f1f;
+    box-shadow: 0 5px 30px hsla(274, 82%, 60%, 100%);
+}
+
+.font__name--light {
+    color: #2d2d2d;
+}
+
+.font__name--dark {
+    color: #ffffff;
+}
+
+.form--dark {
+    background-color: #1f1f1f;
+
+    input {
+        color: white;
+    }
+}
+
+.form--light {
+    background-color: #f4f4f4;
+
+    input {
+        color: #2d2d2d;
+    }
+}
+
