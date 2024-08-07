@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 
 function Header(props) {
     const body = document.querySelector('body')
@@ -49,77 +49,6 @@ function Header(props) {
         })
     }
 
-    useEffect(() => {
-        const theme = window.matchMedia("(prefers-color-scheme: dark)");
-        const themeButton = document.getElementById('check');
-        const moonIcon = document.querySelector('[data-moon-icon]')
-        const currentFont = document.querySelector('[data-current-font]')
-        const optionDropdown = document.querySelector('[data-status]')
-        const fontNames = document.querySelectorAll('[data-font-name]')
-        const form = document.querySelector('form')
-        const notFoundTitle = document.querySelector('[data-notfound-title]')
-
-        if(theme.matches) {
-            setDarkTheme();
-            themeButton.checked = true;
-        } else if(!theme.matches) {
-            setLightTheme();
-            themeButton.checked = false;
-        }
-
-        themeButton.addEventListener('click', () => {
-            if(themeButton.checked) {
-                setDarkTheme()
-            } else if(!themeButton.checked) {
-                setLightTheme()
-            }
-        })
-    
-        function setDarkTheme() {
-            body.classList.add('body--dark')
-            body.classList.remove('body--light')
-            moonIcon.classList.add('moon__icon--dark')
-            moonIcon.classList.remove('moon__icon--light')
-            currentFont.classList.add('current__font--dark')
-            currentFont.classList.remove('current__font--light')
-            optionDropdown.classList.add('option__dropdown--dark')
-            optionDropdown.classList.remove('option__dropdown--light')
-
-            fontNames.forEach(name => {
-                name.classList.add('font__name--dark')
-                name.classList.remove('font__name--light')
-            })
-
-            form.classList.add('form--dark')
-            form.classList.remove('form--light')
-            // notFoundTitle.classList.add('notFound__title--dark')
-            // notFoundTitle.classList.remove('notFound__title--light')
-            
-        }
-    
-        function setLightTheme() {
-            body.classList.add('body--light')
-            body.classList.remove('body--dark')
-            moonIcon.classList.add('moon__icon--light')
-            moonIcon.classList.remove('moon__icon--dark')
-            currentFont.classList.add('current__font--light')
-            currentFont.classList.remove('current__font--dark')
-            optionDropdown.classList.add('option__dropdown--light')
-            optionDropdown.classList.remove('option__dropdown--dark')
-            
-            fontNames.forEach(name => {
-                name.classList.add('font__name--light')
-                name.classList.remove('font__name--dark')
-            })
-
-            form.classList.add('form--light')
-            form.classList.remove('form--dark')
-            // notFoundTitle.classList.add('notFound__title--light')
-            // notFoundTitle.classList.remove('notFound__title--dark')
-        }
-    }, [])
-
-    
     return(
         <header>
             <div className="header__top">
@@ -148,7 +77,7 @@ function Header(props) {
 
                     <div className="theme__controls">
                         <label className="toggle" htmlFor="check">
-                            <input type="checkbox" id="check" name="check" />
+                            <input type="checkbox" id="check" name="check"/>
                             <span className="toggle__slider"></span>
                         </label>
                         <svg data-moon-icon xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"><path fill="none"  strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M1 10.449a10.544 10.544 0 0 0 19.993 4.686C11.544 15.135 6.858 10.448 6.858 1A10.545 10.545 0 0 0 1 10.449Z"/></svg>

@@ -62,6 +62,14 @@
   color: #ffffff;
 }
 
+.word--light {
+  color: #2d2d2d;
+}
+
+.word--dark {
+  color: #ffffff;
+}
+
 .li--light {
   color: #2d2d2d;
 }

@@ -1,4 +1,3 @@
-import List from "../../../../React Practice/react-practice/src/List";
 
 function Word(props) {
 
@@ -20,8 +19,8 @@ function Word(props) {
         }
     }
 
-    const nounDefinitions = props.content[0].meanings[0].definitions.map(definition => <li>{definition.definition}</li>)
-    const verbDefinitions = props.content[0].meanings[1].definitions.map(definition => <li>{definition.definition} <br /> <span>"{definition.example}" </span> </li>)
+    const nounDefinitions = props.content[0].meanings[0].definitions.map(definition => <li key={definition.definition} data-pos-def>{definition.definition}</li>)
+    const verbDefinitions = props.content[0].meanings[1].definitions.map(definition => <li key={definition.definition} data-pos-def>{definition.definition} <br /> <span>"{definition.example}" </span> </li>)
 
 
     console.log(props.content)
@@ -30,7 +29,7 @@ function Word(props) {
         <section className="word">
             <div className="word__intro">
                 <div className="word__intro__text">
-                    <h1>{props.content[0].word}</h1>
+                    <h1 data-word>{props.content[0].word}</h1>
                     <p>{props.content[0].phonetic}</p>
                 </div>
                 <button onClick={play}>
@@ -65,7 +64,7 @@ function Word(props) {
                 </ul>
             </div>
 
-            <p className="word__source">Source <a target='_blank' href={props.content[0].sourceUrls[0]}>{props.content[0].sourceUrls[0]}
+            <p className="word__source">Source <a target='_blank' href={props.content[0].sourceUrls[0]} data-src>{props.content[0].sourceUrls[0]}
             </a><img src="../src/assets/images/icon-new-window.svg" alt="" /></p>
 
         </section>
