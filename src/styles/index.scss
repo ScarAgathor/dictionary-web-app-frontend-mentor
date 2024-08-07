@@ -58,7 +58,7 @@ body {
     display: flex;
     justify-content: center;
     // Change this
-    padding: 50px 300px
+    padding: 50px clamp(24px, 10vw, 350px)
 }
 
 main {
@@ -207,7 +207,7 @@ form {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px;
+    padding: 0 24px;
 
     label {
         flex-grow: 1;
@@ -224,18 +224,28 @@ form {
         width: 100%;
         font-size: 20px;
         font-weight: bold;
-    }
-
-    input & {
-        background-color: red;
-    }
-
+    }   
+    
     button {
         background: none;
         border: none;
+        cursor: pointer;
     }
 }
  
 .form--focus {
     border: 1px solid #a445ed;
+}
+
+.form--error {
+    border: 1px solid #ff5252;
+}
+
+.error {
+    font-size: 20px;
+    color: #ff5252;
+}
+
+.error--display {
+    display: none;
 }
