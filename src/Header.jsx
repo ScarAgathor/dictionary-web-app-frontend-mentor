@@ -85,17 +85,17 @@ function Header(props) {
                 </div>
             </div>
 
-        <div>
-            <form onSubmit={props.handleSubmit}>
-                <label htmlFor="search">
-                    <input type="text" name="search" id="search" onFocus={handleFocus}/>
-                </label>
-                <button type="submit">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path fill="none" stroke="#A445ED" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m12.663 12.663 3.887 3.887M1 7.664a6.665 6.665 0 1 0 13.33 0 6.665 6.665 0 0 0-13.33 0Z"/></svg>
-                </button>
-            </form>
-            <p className="error error--display">Whoops, can’t be empty…</p>
-        </div>
+            <div>
+                <form onSubmit={props.handleSubmit}>
+                    <label htmlFor="search">
+                        <input type="text" name="search" id="search" onFocus={handleFocus}/>
+                    </label>
+                    <button type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path fill="none" stroke="#A445ED" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m12.663 12.663 3.887 3.887M1 7.664a6.665 6.665 0 1 0 13.33 0 6.665 6.665 0 0 0-13.33 0Z"/></svg>
+                    </button>
+                </form>
+                <p className="error error--display">Whoops, can’t be empty…</p>
+            </div>
         </header>
     )
 }

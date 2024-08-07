@@ -21,105 +21,103 @@ function App() {
     const poSpeechDef = document.querySelectorAll('[data-pos-def]')
 
     if(theme.matches) {
-        setDarkTheme();
-        themeButton.checked = true;
+      setDarkTheme();
+      themeButton.checked = true;
     } else if(!theme.matches) {
-        setLightTheme();
-        themeButton.checked = false;
+      setLightTheme();
+      themeButton.checked = false;
     }
 
     themeButton.addEventListener('click', () => {
-        if(themeButton.checked) {
-            setDarkTheme()
-        } else if(!themeButton.checked) {
-            setLightTheme()
-        }
+      if(themeButton.checked) {
+        setDarkTheme()
+      } else if(!themeButton.checked) {
+        setLightTheme()
+      }
     })
 
     function setDarkTheme() {
-        body.classList.add('body--dark')
-        body.classList.remove('body--light')
-        moonIcon.classList.add('moon__icon--dark')
-        moonIcon.classList.remove('moon__icon--light')
-        currentFont.classList.add('current__font--dark')
-        currentFont.classList.remove('current__font--light')
-        optionDropdown.classList.add('option__dropdown--dark')
-        optionDropdown.classList.remove('option__dropdown--light')
+      body.classList.add('body--dark')
+      body.classList.remove('body--light')
+      moonIcon.classList.add('moon__icon--dark')
+      moonIcon.classList.remove('moon__icon--light')
+      currentFont.classList.add('current__font--dark')
+      currentFont.classList.remove('current__font--light')
+      optionDropdown.classList.add('option__dropdown--dark')
+      optionDropdown.classList.remove('option__dropdown--light')
 
-        fontNames.forEach(name => {
-            name.classList.add('font__name--dark')
-            name.classList.remove('font__name--light')
+      fontNames.forEach(name => {
+        name.classList.add('font__name--dark')
+        name.classList.remove('font__name--light')
+      })
+
+      form.classList.add('form--dark')
+      form.classList.remove('form--light')
+
+      if(notFoundTitle != null) {
+        notFoundTitle.classList.add('notFound__title--dark')
+        notFoundTitle.classList.remove('notFound__title--light')
+      }
+
+      if(searchedWord != null) {
+        searchedWord.classList.add('word--dark')
+        searchedWord.classList.remove('word--light')
+      }           
+
+      if(wordSrc != null) {
+        wordSrc.classList.add('src--dark')
+        wordSrc.classList.remove('src--light')
+      }   
+
+      if(poSpeechDef.length != 0) {
+        poSpeechDef.forEach(def => {
+          def.classList.add('li--dark')
+          def.classList.remove('li--light')
         })
-
-        form.classList.add('form--dark')
-        form.classList.remove('form--light')
-
-        if(notFoundTitle != null) {
-            notFoundTitle.classList.add('notFound__title--dark')
-            notFoundTitle.classList.remove('notFound__title--light')
-        }
-
-        if(searchedWord != null) {
-            searchedWord.classList.add('word--dark')
-            searchedWord.classList.remove('word--light')
-        }           
-
-        if(wordSrc != null) {
-            wordSrc.classList.add('src--dark')
-            wordSrc.classList.remove('src--light')
-        }   
-
-        if(poSpeechDef.length != 0) {
-          poSpeechDef.forEach(def => {
-            def.classList.add('li--dark')
-            def.classList.remove('li--light')
-          })
-        } 
+      } 
     }
 
     function setLightTheme() {
-        body.classList.add('body--light')
-        body.classList.remove('body--dark')
-        moonIcon.classList.add('moon__icon--light')
-        moonIcon.classList.remove('moon__icon--dark')
-        currentFont.classList.add('current__font--light')
-        currentFont.classList.remove('current__font--dark')
-        optionDropdown.classList.add('option__dropdown--light')
-        optionDropdown.classList.remove('option__dropdown--dark')
-        
-        fontNames.forEach(name => {
-            name.classList.add('font__name--light')
-            name.classList.remove('font__name--dark')
+      body.classList.add('body--light')
+      body.classList.remove('body--dark')
+      moonIcon.classList.add('moon__icon--light')
+      moonIcon.classList.remove('moon__icon--dark')
+      currentFont.classList.add('current__font--light')
+      currentFont.classList.remove('current__font--dark')
+      optionDropdown.classList.add('option__dropdown--light')
+      optionDropdown.classList.remove('option__dropdown--dark')
+      
+      fontNames.forEach(name => {
+        name.classList.add('font__name--light')
+        name.classList.remove('font__name--dark')
+      })
+
+      form.classList.add('form--light')
+      form.classList.remove('form--dark')
+
+      if(notFoundTitle != null) {
+        notFoundTitle.classList.add('notFound__title--light')
+        notFoundTitle.classList.remove('notFound__title--dark')
+      }
+
+      if(searchedWord != null) {
+        searchedWord.classList.add('word--light')
+        searchedWord.classList.remove('word--dark')
+      }
+
+      if(wordSrc != null) {
+        wordSrc.classList.add('src--light')
+        wordSrc.classList.remove('src--dark')
+      }   
+
+      if(poSpeechDef.length != 0) {
+        poSpeechDef.forEach(def => {
+          def.classList.add('li--light')
+          def.classList.remove('li--dark')
         })
-
-        form.classList.add('form--light')
-        form.classList.remove('form--dark')
-
-        if(notFoundTitle != null) {
-            notFoundTitle.classList.add('notFound__title--light')
-            notFoundTitle.classList.remove('notFound__title--dark')
-        }
-
-        if(searchedWord != null) {
-            searchedWord.classList.add('word--light')
-            searchedWord.classList.remove('word--dark')
-        }
-
-        if(wordSrc != null) {
-            wordSrc.classList.add('src--light')
-            wordSrc.classList.remove('src--dark')
-        }   
-
-        if(poSpeechDef.length != 0) {
-          poSpeechDef.forEach(def => {
-            def.classList.add('li--light')
-            def.classList.remove('li--dark')
-          })
-        } 
-        
-       
+      }       
     }
-})
+  })
 
   function handleSubmit(event) {
     event.preventDefault()

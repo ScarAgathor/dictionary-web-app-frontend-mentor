@@ -19,8 +19,10 @@ function Word(props) {
         }
     }
 
-    const nounDefinitions = props.content[0].meanings[0].definitions.map(definition => <li key={definition.definition} data-pos-def>{definition.definition}</li>)
-    const verbDefinitions = props.content[0].meanings[1].definitions.map(definition => <li key={definition.definition} data-pos-def>{definition.definition} <br /> <span>"{definition.example}" </span> </li>)
+    const nounDefinitions = props.content[0].meanings[0] != undefined ?
+                            props.content[0].meanings[0].definitions.map(definition => <li key={definition.definition} data-pos-def>{definition.definition}</li>) : ''
+    const verbDefinitions = props.content[0].meanings[1] != undefined ?
+                            props.content[0].meanings[1].definitions.map(definition => <li key={definition.definition} data-pos-def>{definition.definition} <br /> <span>"{definition.example}" </span> </li>) : ''
 
 
     console.log(props.content)
