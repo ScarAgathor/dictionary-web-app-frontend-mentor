@@ -1,8 +1,10 @@
-import { useState } from "react"
+import { useState, useEffect, createContext } from "react"
 import Header from "./Header"
 import DictionaryView from "./DictionaryView"
 
 function App() {
+
+  const MyContext = createContext()
 
   const [data, setData] = useState([])
 
@@ -24,6 +26,8 @@ function App() {
       })
     }
   }
+
+  
 
   return (
     <>

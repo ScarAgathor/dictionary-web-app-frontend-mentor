@@ -256,15 +256,150 @@ form {
     align-items: center;
     margin-top: 128px;
     gap: 24px;
+
+    &__img {
+        font-size: 5rem;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    &__message {
+        color: #757575;
+        max-width: 736px;
+        text-align: center;
+    }
 }
 
-.notFound__title {
-    font-size: 20px;
-    font-weight: bold;
+.word {
+    margin-top: 50px;
+    display: grid;
+    gap: 30px;
 }
 
-.notFound__message {
+.word__intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__text {
+        display: grid;
+        gap: 35px;
+    }
+
+    h1 {
+        font-size: 64px;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 24px;
+        color: #a445ed;
+    }
+
+    button {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        svg {
+            g {
+                fill: white;
+            }
+            
+            circle {
+                opacity: 1;
+                fill: #a445ed;
+            }
+        }
+    }
+}
+
+.poSpeech {
+    display: grid;
+    gap: 40px;
+
+    .poSpeech__intro {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+    }
+
+    .poSpeech__line {
+        flex: 1;
+        height: 1px;
+        background-color: #e9e9e9;
+    }
+
+    h2 {
+        font-style: italic;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .poSpeech__meaning {
+        margin-bottom: 12px;
+        color: #757575;
+        font-size: 20px;
+    }
+
+    .poSpeech__definitions {
+        display: grid;
+        gap: 13px;
+        list-style: none;
+
+
+        li {
+            margin-left: 30px;
+        }
+
+        li::before {
+            content: "•";
+            color: #a445ed;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            margin-right: 20px;
+        }
+
+        span {
+            color: #757575;
+            margin-left: 16px;
+        }
+    }
+}
+
+.word__source {
     color: #757575;
-    max-width: 736px;
-    text-align: center;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+
+    a {
+        margin-left: 20px;
+        margin-right: 10px;
+        text-decoration: none;
+        cursor: pointer;
+        color: #2d2d2d;
+    }
 }
+
+.word__synonym{
+    color: #757575;
+    font-size: 20px;
+
+    a {
+        color: #a445ed;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+

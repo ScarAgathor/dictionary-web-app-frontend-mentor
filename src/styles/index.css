@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, *::before, *::after {
   box-sizing: border-box;
   padding: 0;
@@ -241,14 +242,123 @@ form button {
   margin-top: 128px;
   gap: 24px;
 }
-
+.notFound__img {
+  font-size: 5rem;
+  margin-bottom: 10px;
+}
 .notFound__title {
   font-size: 20px;
   font-weight: bold;
 }
-
 .notFound__message {
   color: #757575;
   max-width: 736px;
   text-align: center;
+}
+
+.word {
+  margin-top: 50px;
+  display: grid;
+  gap: 30px;
+}
+
+.word__intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.word__intro__text {
+  display: grid;
+  gap: 35px;
+}
+.word__intro h1 {
+  font-size: 64px;
+  font-weight: bold;
+}
+.word__intro p {
+  font-size: 24px;
+  color: #a445ed;
+}
+.word__intro button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.word__intro button:hover svg g {
+  fill: white;
+}
+.word__intro button:hover svg circle {
+  opacity: 1;
+  fill: #a445ed;
+}
+
+.poSpeech {
+  display: grid;
+  gap: 40px;
+}
+.poSpeech .poSpeech__intro {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+.poSpeech .poSpeech__line {
+  flex: 1;
+  height: 1px;
+  background-color: #e9e9e9;
+}
+.poSpeech h2 {
+  font-style: italic;
+  font-size: 24px;
+  font-weight: bold;
+}
+.poSpeech .poSpeech__meaning {
+  margin-bottom: 12px;
+  color: #757575;
+  font-size: 20px;
+}
+.poSpeech .poSpeech__definitions {
+  display: grid;
+  gap: 13px;
+  list-style: none;
+}
+.poSpeech .poSpeech__definitions li {
+  margin-left: 30px;
+}
+.poSpeech .poSpeech__definitions li::before {
+  content: "•";
+  color: #a445ed;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  margin-right: 20px;
+}
+.poSpeech .poSpeech__definitions span {
+  color: #757575;
+  margin-left: 16px;
+}
+
+.word__source {
+  color: #757575;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.word__source a {
+  margin-left: 20px;
+  margin-right: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #2d2d2d;
+}
+
+.word__synonym {
+  color: #757575;
+  font-size: 20px;
+}
+.word__synonym a {
+  color: #a445ed;
+  text-decoration: none;
+}
+.word__synonym a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=index.css.map */

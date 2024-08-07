@@ -60,4 +60,20 @@
 
 .notFound__title--dark {
   color: #ffffff;
+}
+
+.li--light {
+  color: #2d2d2d;
+}
+
+.li--dark {
+  color: #ffffff;
+}
+
+.src--light {
+  color: #2d2d2d;
+}
+
+.src--dark {
+  color: #ffffff;
 }/*# sourceMappingURL=theme.css.map */

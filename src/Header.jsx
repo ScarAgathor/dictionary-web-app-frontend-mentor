@@ -57,7 +57,7 @@ function Header(props) {
         const optionDropdown = document.querySelector('[data-status]')
         const fontNames = document.querySelectorAll('[data-font-name]')
         const form = document.querySelector('form')
-        const notFoundTitle = document.querySelector('[data-notFound-title]')
+        const notFoundTitle = document.querySelector('[data-notfound-title]')
 
         if(theme.matches) {
             setDarkTheme();
@@ -92,8 +92,8 @@ function Header(props) {
 
             form.classList.add('form--dark')
             form.classList.remove('form--light')
-            notFoundTitle.classList.add('notFound__title--dark')
-            notFoundTitle.classList.remove('notFound__title--light')
+            // notFoundTitle.classList.add('notFound__title--dark')
+            // notFoundTitle.classList.remove('notFound__title--light')
             
         }
     
@@ -114,8 +114,8 @@ function Header(props) {
 
             form.classList.add('form--light')
             form.classList.remove('form--dark')
-            notFoundTitle.classList.add('notFound__title--light')
-            notFoundTitle.classList.remove('notFound__title--dark')
+            // notFoundTitle.classList.add('notFound__title--light')
+            // notFoundTitle.classList.remove('notFound__title--dark')
         }
     }, [])
 
