@@ -4,9 +4,7 @@ import DictionaryView from "./DictionaryView"
 
 function App() {
 
-  const [searched, setSearched] = useState(false)
   const [data, setData] = useState([])
-
 
   function handleSubmit(event) {
     event.preventDefault()

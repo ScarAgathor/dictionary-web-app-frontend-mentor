@@ -52,4 +52,12 @@
 }
 .form--light input {
   color: #2d2d2d;
+}
+
+.notFound__title--light {
+  color: #2d2d2d;
+}
+
+.notFound__title--dark {
+  color: #ffffff;
 }/*# sourceMappingURL=theme.css.map */
